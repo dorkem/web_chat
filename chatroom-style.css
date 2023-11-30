@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* 배경색 추가 */
+}
+
+.chat-container {
+    height: calc(100% - 40px); /* 상하 간격 조정 */
+    margin: 20px; /* 채팅 컨테이너 주변 간격 조정 */
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin-left: auto; /* 중앙 정렬 */
+    margin-right: auto; /* 중앙 정렬 */
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #fff; /* 채팅창 배경색 설정 */
+}
+
+.chat-header {
+    background-color: #fee500;
+    padding: 10px;
+    text-align: center;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 10px; /* 메시지 부분 패딩 조정 */
+    overflow-y: auto;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+
+.chat-input input[type="text"] {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 10px;
+}
+
+.chat-input button, .chat-input .attach-button {
+    background-color: #fee500;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.chat-input button:hover, .chat-input .attach-button:hover {
+    background-color: #fdd835;
+}
