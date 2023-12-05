@@ -1,58 +1,72 @@
-body, html {
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2; /* 배경색 추가 */
+    padding: 0;
+    background-color: #f2f2f2;
 }
 
 .chat-container {
-    height: calc(100% - 40px); /* 상하 간격 조정 */
-    margin: 20px; /* 채팅 컨테이너 주변 간격 조정 */
     display: flex;
-    flex-direction: column;
-    max-width: 800px;
-    margin-left: auto; /* 중앙 정렬 */
-    margin-right: auto; /* 중앙 정렬 */
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: #fff; /* 채팅창 배경색 설정 */
+    flex-direction: row;
+    height: 100vh;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    overflow: hidden;
 }
 
 .chat-header {
-    background-color: #fee500;
-    padding: 10px;
+    background-color: #4c3c4c;
+    color: #fff;
+    padding: 20px;
     text-align: center;
 }
 
+.chat-list {
+    width: 30%;
+    background-color: #333;
+    color: #fff;
+    overflow-y: auto;
+}
+
+.chat-list .user {
+    padding: 10px 20px;
+    border-bottom: 1px solid #444;
+}
+
 .chat-messages {
-    flex-grow: 1;
-    padding: 10px; /* 메시지 부분 패딩 조정 */
+    width: 70%;
+    padding: 20px;
     overflow-y: auto;
 }
 
 .chat-input {
+    position: fixed;
+    bottom: 0;
+    left: 30%;
+    width: 70%;
+    background-color: #4c3c4c;
     display: flex;
-    align-items: center;
-    border-top: 1px solid #ccc;
     padding: 10px;
+    box-sizing: border-box;
 }
 
-.chat-input input[type="text"] {
+.chat-input input {
     flex-grow: 1;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin: 0 10px;
-}
-
-.chat-input button, .chat-input .attach-button {
-    background-color: #fee500;
+    padding: 10px;
+    margin-right: 10px;
     border: none;
-    padding: 5px 10px;
-    cursor: pointer;
     border-radius: 4px;
 }
 
-.chat-input button:hover, .chat-input .attach-button:hover {
-    background-color: #fdd835;
+.send-button {
+    padding: 10px 20px;
+    background-color: #5c4c6c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #6c5c7c;
 }
